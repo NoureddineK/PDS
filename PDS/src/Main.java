@@ -18,33 +18,33 @@ public class Main {
 
     // Use with lexer and parser
     
-    try {
-      // Set input
-      CharStream input;
-      if(args.length == 0) {
-        // From standard input
-        input = CharStreams.fromStream(System.in);
-      }
-      else {
-        // From file set in first argument
-        input = CharStreams.fromPath(Paths.get(args[0]));
-      }
-
-      // Instantiate Lexer
-      TurtleLexer lexer = new TurtleLexer(input);
-      CommonTokenStream tokens = new CommonTokenStream(lexer);
-
-      // Instantiate Parser
-      TurtleParser parser = new TurtleParser(tokens);
-
-      // Parse
-      ASD.Document ast = parser.document().out;
-
-      // Print as Ntriples
-      System.out.println(ast.toNtriples());
-    } catch(IOException e) {
-      e.printStackTrace();
-    }
+//    try {
+//      // Set input
+//      CharStream input;
+//      if(args.length == 0) {
+//        // From standard input
+//        input = CharStreams.fromStream(System.in);
+//      }
+//      else {
+//        // From file set in first argument
+//        input = CharStreams.fromPath(Paths.get(args[0]));
+//      }
+//
+//      // Instantiate Lexer
+//      TurtleLexer lexer = new TurtleLexer(input);
+//      CommonTokenStream tokens = new CommonTokenStream(lexer);
+//
+//      // Instantiate Parser
+//      TurtleParser parser = new TurtleParser(tokens);
+//
+//      // Parse
+//      ASD.Document ast = parser.document().out;
+//
+//      // Print as Ntriples
+//      System.out.println(ast.toNtriples());
+//    } catch(IOException e) {
+//      e.printStackTrace();
+//    }
     
   }
 }
