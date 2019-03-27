@@ -1,2 +1,2 @@
 # PDS
-projet Pds
+projet dans le cadre éducatif 
